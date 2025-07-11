@@ -1,79 +1,57 @@
-# WeyaERP Marketing Website
+# WeyaERP - Agricultural ERP System
 
-A modern, responsive marketing website for WeyaERP - an agricultural ERP system designed specifically for Ugandan farmers.
+A modern, comprehensive agricultural ERP system built with Next.js 15, designed to streamline farming operations and agricultural business management.
 
-## 🌱 About WeyaERP
+## 🚀 Live Deployment
 
-WeyaERP is the first ERP built from Ugandan soil, designed to help farmers track every kilo, shilling, and seed in one place. Our mission is to empower Ugandan farmers with technology that understands their unique challenges.
+- **Production URL:** https://weyaerp-site-cmyfuijdq-localrewardsters-projects.vercel.app
+- **GitHub Repository:** https://github.com/LocalRewardster/weyaerp-site
+- **Domain:** weyaerp.com (configuration in progress)
 
-## 🚀 Tech Stack
+## 🌟 Features
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
-- **Forms**: React Hook Form + Zod validation
-- **Email**: Resend
-- **Animations**: react-countup
-- **Deployment**: Vercel
+- **Inventory Management:** Track seeds, fertilizers, equipment, and harvest inventory
+- **Financial Management:** Monitor expenses, revenue, and profit margins
+- **Crop Planning:** Plan and schedule planting, maintenance, and harvesting
+- **Weather Integration:** Real-time weather data for informed decision-making
+- **Reporting & Analytics:** Comprehensive reports and data visualization
+- **Multi-language Support:** Available in multiple languages for global use
 
-## 📁 Project Structure
+## 🛠️ Tech Stack
 
-```
-weyaerp-site/
-├── src/
-│   ├── app/
-│   │   ├── page.tsx          # Home page
-│   │   ├── features/         # Features page
-│   │   ├── pricing/          # Pricing page
-│   │   ├── about/           # About page
-│   │   ├── contact/         # Contact page
-│   │   └── actions/         # Server actions
-│   ├── components/
-│   │   ├── ui/              # shadcn/ui components
-│   │   ├── Navbar.tsx       # Navigation component
-│   │   ├── Footer.tsx       # Footer component
-│   │   └── ...             # Other components
-│   └── lib/
-│       ├── utils.ts         # Utility functions
-│       └── currency.ts      # Currency conversion
-├── public/
-│   ├── images/              # Images and media
-│   ├── icons/               # PWA icons
-│   └── manifest.json        # PWA manifest
-└── ...
-```
+- **Framework:** Next.js 15 with App Router
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI + shadcn/ui
+- **Icons:** Lucide React
+- **Forms:** React Hook Form + Zod validation
+- **Email:** Resend API
+- **Deployment:** Vercel
+- **Version Control:** Git + GitHub
 
-## 🎨 Design System
-
-### Brand Colors
-- **Weya Brown**: #4B3426 (soil/stability)
-- **Weya Green**: #2F9E44 (growth)
-- **Weya Gold**: #F5A623 (sunrise/optimism)
-
-### Typography
-- **Font**: Inter (system fallback)
-- **Headings**: Weight 700
-- **Body**: Weight 400
-
-## 🛠️ Getting Started
+## 🏃‍♂️ Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+
+- Node.js 18 or higher
+- npm, yarn, or pnpm
+- Git
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/LocalRewardster/weyaerp-site.git
 cd weyaerp-site
 ```
 
 2. Install dependencies:
 ```bash
 npm install
+# or
+yarn install
+# or
+pnpm install
 ```
 
 3. Set up environment variables:
@@ -81,147 +59,126 @@ npm install
 cp .env.example .env.local
 ```
 
-4. Add your Resend API key to `.env.local`:
-```
+Edit `.env.local` with your configuration:
+```env
+# Email Configuration
 RESEND_API_KEY=your_resend_api_key_here
+
+# Next.js Configuration
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
-5. Run the development server:
+4. Run the development server:
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## 📧 Email Configuration
+## 📦 Build & Deployment
 
-This project uses [Resend](https://resend.com) for sending contact form emails. To set up:
-
-1. Create a Resend account
-2. Generate an API key
-3. Add the API key to your `.env.local` file
-4. Configure your domain (for production)
-
-## 🌐 Pages
-
-### Home (`/`)
-- Hero section with value proposition
-- Pain points that farmers face
-- Feature highlights
-- Customer testimonials
-- Call-to-action sections
-
-### Features (`/features`)
-- Detailed feature descriptions
-- Animated statistics
-- Feature comparison table
-- Benefits overview
-
-### Pricing (`/pricing`)
-- Three-tier pricing plans
-- Dual currency display (UGX/USD)
-- Feature comparison
-- FAQ section
-
-### About (`/about`)
-- Company mission and values
-- Founder story
-- Company timeline
-- Team information
-
-### Contact (`/contact`)
-- Contact form with validation
-- Contact information
-- Success/error handling
-- FAQ section
-
-## 📱 PWA Features
-
-The site includes Progressive Web App features:
-- Service worker (via next-pwa)
-- App manifest
-- Offline functionality
-- App icons
-
-## 🎯 Key Features
-
-- **Responsive Design**: Works on all devices
-- **SEO Optimized**: Proper meta tags and structured data
-- **Performance**: Optimized images and code splitting
-- **Accessibility**: WCAG compliant
-- **Dark Mode**: System preference detection
-- **Internationalization**: Ready for multiple languages
-
-## 📊 Currency Display
-
-The site displays prices in both UGX and USD:
-- 1 USD = 3,750 UGX (constant rate)
-- Automatic conversion and formatting
-- Localized currency display
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy automatically
-
-### Manual Build
+### Build for Production
 
 ```bash
 npm run build
-npm start
+npm run start
 ```
 
-## 🔧 Development Scripts
+### Deploy to Vercel
 
 ```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
-npm run type-check   # Run TypeScript checks
+# Install Vercel CLI
+npm install -g vercel
+
+# Deploy
+vercel --prod
 ```
 
-## 🎨 Customization
+## 🌐 Domain Configuration
 
-### Adding New Pages
-1. Create a new directory in `src/app/`
-2. Add `page.tsx` file
-3. Update navigation in `Navbar.tsx`
+To connect your custom domain to the Vercel deployment:
 
-### Styling
-- Use Tailwind CSS classes
-- Brand colors are configured in `tailwind.config.ts`
-- Custom components in `src/components/`
+1. **Add Domain in Vercel Dashboard:**
+   - Go to your Vercel project dashboard
+   - Navigate to the "Domains" tab
+   - Add your custom domain (e.g., weyaerp.com)
 
-### Content Updates
-- Update page content directly in component files
-- Images in `public/images/`
-- Icons from Lucide React
+2. **Configure DNS Records:**
+   Add these DNS records to your domain provider:
+   ```
+   Type: A
+   Name: @
+   Value: 76.76.19.19
+
+   Type: CNAME
+   Name: www
+   Value: cname.vercel-dns.com
+   ```
+
+3. **SSL Certificate:**
+   Vercel automatically provisions and manages SSL certificates for your domain.
+
+## 🔧 Development
+
+### Project Structure
+
+```
+weyaerp-site/
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   ├── components/       # React components
+│   │   ├── ui/          # shadcn/ui components
+│   │   └── ...          # Custom components
+│   └── lib/             # Utility functions
+├── public/              # Static assets
+├── tailwind.config.ts   # Tailwind CSS configuration
+├── next.config.ts       # Next.js configuration
+└── package.json         # Dependencies and scripts
+```
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 📝 Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `RESEND_API_KEY` | API key for email functionality | Yes |
+| `NEXT_PUBLIC_SITE_URL` | Base URL of your application | Yes |
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🆘 Support
 
-For support, email hello@weyaerp.com or join our community forums.
+For support, email support@weyaerp.com or create an issue in the GitHub repository.
 
-## 🙏 Acknowledgments
+## 🎯 Roadmap
 
-- [Next.js](https://nextjs.org/) for the amazing framework
-- [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
-- [shadcn/ui](https://ui.shadcn.com/) for beautiful components
-- [Lucide](https://lucide.dev/) for the icon library
-- [Resend](https://resend.com/) for email infrastructure
+- [ ] Mobile app development
+- [ ] Advanced reporting features
+- [ ] Integration with IoT sensors
+- [ ] Multi-farm management
+- [ ] API for third-party integrations
+- [ ] Offline functionality
+
+---
+
+Built with ❤️ by the WeyaERP Team
